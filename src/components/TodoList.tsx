@@ -4,6 +4,7 @@ import { useInView } from "react-intersection-observer";
 import TodoItem from "./TodoItem";
 import { todoApi } from "../api/todos";
 import { Todo } from "../types/todo.type";
+import { AxiosError } from "axios";
 
 const ITEMS_PER_PAGE = 4;
 
@@ -15,7 +16,7 @@ export default function TodoList() {
     isFetchingNextPage,
     isPending,
     error,
-  } = useInfiniteQuery<Todo[], Error, Todo[], [string], number>({
+  } = useInfiniteQuery<Todo[], AxiosError, Todo[], [string], number>({
     queryKey: ["todos"],
     initialPageParam: 1,
     queryFn: async ({ pageParam }) => {
