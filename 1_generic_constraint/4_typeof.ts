@@ -23,5 +23,5 @@
   const name = getProperty(person, "name"); // "John"
   const age = getProperty(person, "age"); // 30
   const email = getProperty(person, "email"); // "john@example.com"
-  console.log(name, age, email);
+  // const height = getProperty(person, "height"); // type error
 }

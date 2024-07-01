@@ -18,3 +18,4 @@ const person: PersonType = {
 
 const personName = getProperty(person, "name");
 const personAge = getProperty(person, "age");
+// const personAge = getProperty(person, "height");
